@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kwencher</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+  <!-- Google Places  -->
+</head>
+<body>
+  <!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="/">Kwencher</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+              <li>
+                  <a class="btn btn-default" href="/addspecials">Add Specials</a>
+              </li>
+              <li>
+                  <a class="btn btn-default" href="/login">Login</a>
+              </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<header>
+    <div class="container">
+        <div class="intro-text">
+          <!-- <h2>Header</h2> -->
+        </div>
+    </div>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<footer>
+  <ul class="footer-menu">
+      <li>
+          <a href="/admin">Admin</a>
+      </li>
+      <li>
+          <a href="/api">API</a>
+      </li>
+      <li>
+          <a href="/beers">Beers</a>
+      </li>
+      <li>
+          <a href="/specials">Specials</a>
+      </li>
+  </ul>
+</footer>
+<script src="{% static 'js/places.js' %}"></script>
+
+<!-- jquery -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<!-- Agency js -->
+<script src="{% static 'js/agency.js' %}"></script>
+<!-- Google Places -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWz82wYrWBPHsXjvJlOOo0IKaIki-LE8I&libraries=places&callback=initMap"
+    async defer></script>
+<!-- jquery     -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+</body>
+</html>

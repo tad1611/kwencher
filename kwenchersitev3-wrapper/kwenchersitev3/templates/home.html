@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 specials-container">
+      <h2 align="center">{{ day_display }}'s Specials</h2>
+      <script>
+      var place1 = [
+      {% for location in location_dim %}
+        ['{{ location.PLACE_ID }}', '{{ special.location}}'],
+      {% endfor %} ]
+      </script>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <!-- <th>Place Id</th> -->
+            <th>Location</th>
+            <th>Start</th>
+            <th>End</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for special in specials_fct %}
+            <td>{{ special.SPECIAL_HDR_DESC }}</td>
+            <!-- <td>{{ special.PLACE_ID_id}}</td> -->
+            <td>{{ special.LOCATION_KEY }}</td>
+            <td>{{ special.START_TIME }}</td>
+            <td>{{ special.END_TIME }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6 col-sm-offset-6 portfolio-item">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

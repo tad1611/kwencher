@@ -1,0 +1,18 @@
+coverage
+django-extensions
+-e git+https://github.com/coleifer/django-generic-m2m.git#egg=genericm2m
+django-gm2m
+django-querysetsequence
+django-taggit
+django-tagging
+bson==0.4.2
+https://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.4.tar.gz
+pymongo==3.2.1
+mock
+selenium
+pytest
+splinter
+pytest-django
+pytest-covirtualenvwrapper
+djangorestframework==3.3.1
+django-autocomplete-light==3.1.7

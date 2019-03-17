@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th align="left">Name</th>
+      <th align="left">Location</th>
+      <th align="left">START</th>
+      <th align="left">END</th>
+      <th align="left">Mon</th>
+      <th align="left">Tue</th>
+      <th align="left">Wed</th>
+      <th align="left">Thur</th>
+      <th align="left">Fri</th>
+      <th align="left">Sat</th>
+      <th align="left">Sun</th>
+      <th align="left">Start Time</th>
+      <th align="left">End Time</th>
+    </tr>
+  </thead>
+   Place ID: {{ location_dim.PLACE_ID }} <BR>
+    {% for special in specials_fct %}
+        <tr>
+          <td>{{ special.SPECIAL_HDR_DESC }}</td>
+          <td>{{ special.LOCATION_KEY }}</td>
+          <td>{{ special.START_TIME }}</td>
+          <td>{{ special.END_TIME }}</td>
+          <td>{{ special.DAY_MON_FLG }}</td>
+          <td>{{ special.DAY_TUE_FLG }}</td>
+          <td>{{ special.DAY_WED_FLG }}</td>
+          <td>{{ special.DAY_THUR_FLG }}</td>
+          <td>{{ special.DAY_FRI_FLG }}</td>
+          <td>{{ special.DAY_SAT_FLG }}</td>
+          <td>{{ special.DAY_SUN_FLG }}</td>
+          <td>{{ special.CREATE_DATE }}</td>
+          <td>{{ special.UPDATE_DATE }}</td>
+          <td>{{ special.test }}</td>
+
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+{% endblock %}

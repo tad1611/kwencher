@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- start of specials form  -->
+    <h3>Add a Special</h3>
+    <form method="POST" class="post-form">{% csrf_token %}
+{{ form.non_field_errors }}
+<div class="fieldWrapper">
+    {{ form.SPECIAL_HDR_DESC.errors }}
+    <label for="{{ form.SPECIAL_HDR_DESC.id_for_label }}">Happy Hour Description:</label>
+    {{ form.SPECIAL_HDR_DESC }}
+</div>
+<div class="fieldWrapper">
+    {{ form.LOCATION_KEY.errors }}
+    <label for="{{ form.PLACE_ID.id_for_label }}">Location:</label>
+    {{ form.LOCATION_KEY }}
+</div>
+<div class="fieldWrapper">
+    {{ form.START_TIME.errors }}
+    <label for="{{ form.START_TIME.id_for_label }}">Starts?:</label>
+    {{ form.START_TIME }}
+    {{ form.END_TIME.errors }}
+    <label for="{{ form.END_TIME.id_for_label }}">Ends?:</label>
+    {{ form.END_TIME }}
+</div>
+<div class="fieldWrapper">
+  <h4>What days is it available on?</h4>
+  <ul class="list-inline">
+    <li>
+      {{ form.DAY_SUN_FLG.errors }}
+      <label for="{{ form.DAY_SUN_FLG.id_for_label }}">Sunday:</label>
+      {{ form.DAY_SUN_FLG }}
+    </li>
+    <li>
+      {{ form.DAY_MON_FLG.errors }}
+      <label for="{{ form.DAY_MON_FLG.id_for_label }}">Monday:</label>
+      {{ form.DAY_MON_FLG }}
+    </li>
+    <li>
+      {{ form.DAY_TUE_FLG.errors }}
+      <label for="{{ form.DAY_TUE_FLG.id_for_label }}">Tuesday:</label>
+      {{ form.DAY_TUE_FLG }}
+    </li>
+    <li>
+      {{ form.DAY_WED_FLG.errors }}
+      <label for="{{ form.DAY_WED_FLG.id_for_label }}">Wednesday:</label>
+      {{ form.DAY_WED_FLG }}
+    </li>
+    <li>
+      {{ form.DAY_THU_FLG.errors }}
+      <label for="{{ form.DAY_THU_FLG.id_for_label }}">Thursday:</label>
+      {{ form.DAY_THU_FLG }}
+    </li>
+    <li>
+      {{ form.DAY_FRI_FLG.errors }}
+      <label for="{{ form.DAY_FRI_FLG.id_for_label }}">Friday:</label>
+      {{ form.DAY_FRI_FLG }}
+    </li>
+    <li>
+      {{ form.DAY_SAT_FLG.errors }}
+      <label for="{{ form.DAY_SAT_FLG.id_for_label }}">Saturday:</label>
+      {{ form.DAY_SAT_FLG }}
+    </li>
+  <ul>
+</div>
+
+<!-- End of Special form -->
+
+<!-- Start of Special form  -->
+<h3>Add Special Item</h3>
+{{ form2 }}
+<button type="submit" class="save btn btn-default">Save</button>
+</form>
+<!-- End of Special form  -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {{ form.media }}
+{% endblock %}
